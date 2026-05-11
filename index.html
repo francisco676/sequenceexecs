@@ -15,6 +15,7 @@
     --yellow:#DDFF4D;
     --ink:#0b1020;
     --gray:#6b7280;
+    --gray-soft:#9aa1ad;
     --bg:#ffffff;
     --bg-soft:#f7f8fb;
     --line:#e7e9ef;
@@ -316,6 +317,39 @@
     .sidebar{display:none}
     .brand-mobile{display:inline-flex}
   }
+
+  /* Top Voices section */
+  .voices-intro{margin-top:40px}
+  .post-mock{margin-top:32px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 32px;max-width:580px;box-shadow:0 1px 0 rgba(0,0,0,.02),0 12px 32px -16px rgba(11,16,32,.12);position:relative}
+  .post-mock::before{content:"in";position:absolute;top:-14px;right:24px;background:#0a66c2;color:#fff;width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;font-weight:700;font-size:14px;letter-spacing:-0.04em;font-style:italic}
+  .post-header{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+  .post-avatar{width:44px;height:44px;border-radius:999px;background:linear-gradient(135deg,#3d68f5,#2a3ad8);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;font-weight:700;font-size:16px;letter-spacing:-0.02em;flex-shrink:0}
+  .post-header .who{font-family:'Inter',sans-serif;font-weight:700;font-size:15px;color:var(--ink);letter-spacing:-0.01em;line-height:1.3}
+  .post-header .who .role{display:block;font-weight:400;font-size:12px;color:var(--gray);margin-top:2px}
+  .post-header .who .meta-line{display:block;font-weight:400;font-size:11px;color:var(--gray-soft);margin-top:4px;font-family:'JetBrains Mono',monospace;letter-spacing:.04em}
+  .post-body{font-size:14px;color:var(--ink);line-height:1.55;margin-bottom:18px}
+  .post-body p{margin:0 0 10px}
+  .post-body p:last-child{margin-bottom:0}
+  .post-body strong{font-weight:700}
+  .post-stats{display:flex;align-items:center;gap:16px;padding-top:14px;border-top:1px solid var(--line);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.06em;color:var(--gray);text-transform:uppercase}
+  .post-stats .stat-pill{display:inline-flex;align-items:center;gap:6px}
+  .post-stats .stat-pill strong{color:var(--ink);font-weight:700;font-family:'Inter',sans-serif;letter-spacing:-0.01em;text-transform:none;font-size:13px}
+  .post-stats .highlight{margin-left:auto;background:var(--yellow);color:var(--ink);padding:4px 10px;border-radius:999px;font-weight:600;letter-spacing:.1em}
+
+  .benchmarks{margin-top:48px;border-top:1px solid var(--line)}
+  .benchmark-row{display:grid;grid-template-columns:200px 1fr auto;gap:32px;align-items:center;padding:24px 0;border-bottom:1px solid var(--line)}
+  .benchmark-row .who{font-family:'Inter',sans-serif;font-weight:700;font-size:18px;letter-spacing:-0.01em;color:var(--ink);line-height:1.3}
+  .benchmark-row .who .role{display:block;font-weight:400;font-size:13px;color:var(--gray);margin-top:2px;letter-spacing:0}
+  .benchmark-row .who .stat{display:inline-flex;align-items:center;gap:6px;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px;transition:color .15s ease,border-color .15s ease}
+  .benchmark-row .who .stat:hover{color:var(--ink);border-color:var(--ink)}
+  .benchmark-row .who .stat .ext{font-size:9px;opacity:.6}
+  .benchmark-row .what{font-size:15px;color:var(--ink);line-height:1.5;max-width:520px}
+  .benchmark-row .what em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;background:linear-gradient(180deg,transparent 65%,var(--yellow) 65%,var(--yellow) 92%,transparent 92%);padding:0 .04em}
+  .benchmark-row .tag{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);text-align:right;line-height:1.5;white-space:nowrap}
+  .benchmark-takeaway{margin-top:32px;padding:24px 28px;background:var(--bg-soft);border-radius:16px;border-left:3px solid var(--blue);max-width:720px}
+  .benchmark-takeaway p{margin:0;font-size:16px;line-height:1.5;color:var(--ink)}
+  .benchmark-takeaway p em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400}
+  @media (max-width:680px){.benchmark-row{grid-template-columns:1fr;gap:8px;padding:20px 0}.benchmark-row .tag{text-align:left}}
 </style>
 </head>
 <body>
@@ -333,20 +367,21 @@
       </div>
     </div>
     <div class="sidebar-label">In this proposal</div>
-    <div class="sidebar-total">~11 min read</div>
-    <div class="sidebar-total-sub">11 sections</div>
+    <div class="sidebar-total">~12 min read</div>
+    <div class="sidebar-total-sub">12 sections</div>
     <nav>
       <a href="#opening"><span class="num">01</span><span class="label">Opening</span><span class="read-time">1 min</span></a>
       <a href="#gap"><span class="num">02</span><span class="label">Where you're at</span><span class="read-time">1 min</span></a>
       <a href="#honest-gap"><span class="num">03</span><span class="label">The honest part</span><span class="read-time">1 min</span></a>
       <a href="#coexist"><span class="num">04</span><span class="label">Coexistence</span><span class="read-time">1 min</span></a>
       <a href="#whynow"><span class="num">05</span><span class="label">Why now</span><span class="read-time">1 min</span></a>
-      <a href="#pillars"><span class="num">06</span><span class="label">How we work</span><span class="read-time">1 min</span></a>
-      <a href="#kpis"><span class="num">07</span><span class="label">The KPIs</span><span class="read-time">1 min</span></a>
-      <a href="#timeline"><span class="num">08</span><span class="label">90 days</span><span class="read-time">1 min</span></a>
-      <a href="#proof"><span class="num">09</span><span class="label">The receipt</span><span class="read-time">1 min</span></a>
-      <a href="#offer"><span class="num">10</span><span class="label">Pricing</span><span class="read-time">1 min</span></a>
-      <a href="#honest"><span class="num">11</span><span class="label">What's true</span><span class="read-time">30s</span></a>
+      <a href="#voices"><span class="num">06</span><span class="label">Top voices</span><span class="read-time">1 min</span></a>
+      <a href="#pillars"><span class="num">07</span><span class="label">How we work</span><span class="read-time">1 min</span></a>
+      <a href="#kpis"><span class="num">08</span><span class="label">The KPIs</span><span class="read-time">1 min</span></a>
+      <a href="#timeline"><span class="num">09</span><span class="label">90 days</span><span class="read-time">1 min</span></a>
+      <a href="#proof"><span class="num">10</span><span class="label">The receipt</span><span class="read-time">1 min</span></a>
+      <a href="#offer"><span class="num">11</span><span class="label">Pricing</span><span class="read-time">1 min</span></a>
+      <a href="#honest"><span class="num">12</span><span class="label">What's true</span><span class="read-time">30s</span></a>
     </nav>
     <div class="progress-block">
       <div class="progress-text"><span>Progress</span><span class="pct">0%</span></div>
@@ -503,6 +538,75 @@
 
         <div class="pullquote">
           <p>Category authority is the one moat competitors can't acquire. It's also the one that compounds with time. The case for moving now is just that the time only works one way.</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===================== TOP VOICES ===================== -->
+    <div class="wrap">
+      <section id="voices">
+        <div class="eyebrow">The voices that own their categories</div>
+        <h2>This is what an audience <em>actually looks like</em>.</h2>
+        <p class="body voices-intro">If category authority is the moat that compounds, the three founders below are what compounded authority actually looks like. <em>Different ICPs, different stages, same engine</em> — and each one is a working receipt for what we're proposing to build for Gilad. We picked them deliberately: Eric Glyman is the most direct adjacency to Sequence (Ramp, finance automation, every Sequence prospect already reads him), Eynat Guez is the Israeli fintech mirror at unicorn scale, and Immad Akhund is the build-in-public playbook Gilad can run almost verbatim from Sequence's exact stage.</p>
+
+        <!-- LinkedIn-style mock post -->
+        <div class="post-mock">
+          <div class="post-header">
+            <div class="post-avatar">GA</div>
+            <div class="who">
+              Gal Aga
+              <span class="role">Co-Founder &amp; CEO at Aligned · 92,000 followers</span>
+              <span class="meta-line">14h · Edited</span>
+            </div>
+          </div>
+          <div class="post-body">
+            <p>Closed an enterprise deal last week.</p>
+            <p>The buyer told me, in the kickoff call: <strong>"I've been reading your posts for nine months. By the time my team brought you in, I was already sold."</strong></p>
+            <p>I wrote 0 cold emails to that account. We have 0 SDRs. The post that sold him was about pricing transparency in B2B SaaS. He commented on it in February. We talked in October. He signed in November.</p>
+            <p>This is what founder content actually does. Not <em>"thought leadership."</em> Pipeline. Nine months of compounding pipeline that no other channel can produce.</p>
+            <p><strong>If you're a founder and you're not posting, you're outsourcing your category narrative to whoever is.</strong></p>
+          </div>
+          <div class="post-stats">
+            <span class="stat-pill"><strong>2,847</strong> reactions</span>
+            <span class="stat-pill"><strong>312</strong> comments</span>
+            <span class="stat-pill highlight">Illustrative</span>
+          </div>
+        </div>
+
+        <p class="body" style="margin-top:24px">The post above is illustrative, composed in the style and substance of what Gal actually publishes. <strong>The pattern is real and verifiable on his profile.</strong> Founder posts → enterprise deals → no SDRs needed. This is the engine we're proposing to build for Gilad.</p>
+
+        <div class="benchmarks">
+          <div class="benchmark-row">
+            <div class="who">
+              Eric Glyman
+              <span class="role">Co-Founder &amp; CEO, Ramp</span>
+              <a class="stat" href="https://www.linkedin.com/in/eglyman/" target="_blank" rel="noopener">36K followers <span class="ext">↗</span></a>
+            </div>
+            <div class="what">The most direct adjacency Gilad could pick. Posts regularly on <em>hiring philosophy, product launches, acquisitions (Venue, Billhop), and Ramp's internal AI rollout</em>. Every Sequence prospect — every CFO buying finance automation — reads him. Gilad should be reacting to his posts, not staying silent on them.</div>
+            <div class="tag">Finance automation · NYC fintech</div>
+          </div>
+          <div class="benchmark-row">
+            <div class="who">
+              Eynat Guez
+              <span class="role">Co-Founder &amp; CEO, Papaya Global</span>
+              <a class="stat" href="https://www.linkedin.com/in/eynatguez/" target="_blank" rel="noopener">49K followers ↗</a>
+            </div>
+            <div class="what">First female-led Israeli unicorn at $3.7B. Posts on global payroll, AI in fintech, and hard-won lessons — famously turning <em>1,000 rejections into $34B in annual payments</em>. The exact "Israeli founder posting their way into category leadership" benchmark, at the scale Sequence is aiming for.</div>
+            <div class="tag">Israeli fintech · LinkedIn Top Voice</div>
+          </div>
+          <div class="benchmark-row">
+            <div class="who">
+              Immad Akhund
+              <span class="role">Co-Founder &amp; CEO, Mercury</span>
+              <a class="stat" href="https://www.linkedin.com/in/iakhund/" target="_blank" rel="noopener">38K followers ↗</a>
+            </div>
+            <div class="what">Banking for startups, $3B+ unicorn. Heavy <em>build-in-public</em> LinkedIn voice — product launches like Mercury Insights, acquisitions like Central (AI payroll), candid posts on AI tooling, personal investments in adjacent fintech. The founder-led marketing playbook Gilad can run almost verbatim.</div>
+            <div class="tag">Consumer + B2B banking · Founder voice</div>
+          </div>
+        </div>
+
+        <div class="benchmark-takeaway">
+          <p>In 12 months, Gilad should be mentioned in this group — the founder who named financial routing in his own words first. <em>That's the work.</em></p>
         </div>
       </section>
     </div>
