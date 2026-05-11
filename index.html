@@ -92,9 +92,6 @@
   .eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);display:inline-flex;align-items:center;gap:8px;margin-bottom:18px}
   .eyebrow::before{content:"";width:18px;height:1px;background:var(--blue);display:inline-block}
 
-  .stamp{display:inline-flex;align-items:center;gap:10px;padding:8px 14px 8px 8px;border-radius:999px;background:var(--yellow);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);font-weight:500;margin-bottom:24px}
-  .stamp .pill{background:var(--ink);color:var(--yellow);padding:4px 10px;border-radius:999px;font-weight:700;letter-spacing:.1em}
-
   .hero{padding:32px 0 56px;border-bottom:1px solid var(--line);scroll-margin-top:20px}
   h1{font-family:'Inter',sans-serif;font-weight:800;font-size:clamp(40px,6vw,68px);line-height:1.04;letter-spacing:-0.04em;color:var(--blue-dark);margin:0 0 28px}
   h1 em,.em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--ink);background:linear-gradient(180deg,transparent 65%,var(--yellow) 65%,var(--yellow) 92%,transparent 92%);padding:0 .04em}
@@ -213,7 +210,6 @@
   .proof .stat .big{background:linear-gradient(180deg,transparent 70%,var(--yellow) 70%,var(--yellow) 92%,transparent 92%);padding:0 .04em}
   .proof .caption{font-size:16px;color:var(--ink);line-height:1.55}
   .proof .caption .label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);display:block;margin-bottom:10px}
-  .proof .caption .footnote{display:block;margin-top:12px;font-size:13px;color:var(--gray)}
   @media (max-width:680px){.proof{grid-template-columns:1fr;gap:20px;padding:32px 24px}.proof .stat{font-size:48px;white-space:normal}}
 
   .testimonial{margin-top:32px;padding:36px 40px;background:#fff;border:1px solid var(--ink);border-radius:24px;max-width:720px;position:relative}
@@ -266,7 +262,6 @@
   .offer-card .price-row .num{font-family:'Inter',sans-serif;font-weight:800;font-size:52px;letter-spacing:-0.035em;color:var(--ink);line-height:1}
   .offer-card .price-row .unit{font-size:15px;color:var(--gray)}
   .offer-card .term{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);margin-bottom:24px}
-  .offer-card .guarantee-badge{display:inline-flex;align-items:center;gap:8px;background:var(--yellow);color:var(--ink);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;padding:6px 12px;border-radius:999px;margin-bottom:24px}
   .offer-card .divider{height:1px;background:var(--line);margin:0 0 24px}
   .offer-card .section-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray);margin-bottom:14px}
   .offer-card .also-label{color:var(--blue);margin-top:24px;padding-top:20px;border-top:1px dashed var(--line)}
@@ -298,16 +293,19 @@
   .final{padding:80px 0 64px;text-align:left;border-bottom:none}
   .final h2{margin-bottom:28px;max-width:780px}
   .final .meta{margin-top:24px}
+  .cta-btn{display:inline-flex;align-items:center;gap:10px;margin-top:32px;padding:18px 28px;background:var(--ink);color:var(--bg);font-family:'Inter',sans-serif;font-weight:600;font-size:15px;letter-spacing:-0.01em;text-decoration:none;border-radius:999px;transition:transform .18s ease, background .18s ease, box-shadow .18s ease;box-shadow:0 1px 0 rgba(11,16,32,.04)}
+  .cta-btn::after{content:"→";font-family:'Inter',sans-serif;font-weight:500;transition:transform .18s ease}
+  .cta-btn:hover{background:var(--blue-dark);transform:translateY(-1px);box-shadow:0 8px 24px rgba(42,58,216,.18)}
+  .cta-btn:hover::after{transform:translateX(3px)}
 
   footer{padding:40px 0 60px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gray)}
   footer a{color:var(--gray);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
   footer a:hover{color:var(--ink);border-color:var(--ink)}
 
   @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-  .hero .hero-meta,.hero .outline-pill,.hero .program-tag,.hero .stamp,.hero .eyebrow,.hero h1,.hero .lede{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+  .hero .hero-meta,.hero .outline-pill,.hero .program-tag,.hero .eyebrow,.hero h1,.hero .lede{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
   .hero .hero-meta{animation-delay:.02s}
   .hero .outline-pill{animation-delay:.06s}
-  .hero .stamp{animation-delay:.10s}
   .hero .eyebrow{animation-delay:.14s}
   .hero h1{animation-delay:.18s}
   .hero .lede{animation-delay:.24s}
@@ -385,7 +383,6 @@
 
         <div class="program-tag">The 90-Day CEO Audience Builder</div>
         <div class="eyebrow">Prepared for Ari, Gilad, and the Sequence team</div>
-        <div class="stamp"><span class="pill">Guarantee</span> 5x Gilad's impressions in 90 days, or we keep working for free</div>
         <h1>Sequence is defining financial routing. <em>Gilad should be the voice that owns the category</em>.</h1>
         <p class="lede">Sequence is the orchestrator for fragmented finances. Gilad has 12+ years of fintech operator credibility, two startups with the same co-founders, and Aleph + Eden Shochat backing him. Maybe the story is there, but the audience isn't.
           <span class="soft">This proposal is built for a team that's already firing junior marketers and replacing them with agents. We're not pretending AI doesn't change this game. We're showing you exactly what AI still can't do, today, and why $2K/month is the cleanest way to bridge that gap until it can.</span>
@@ -557,7 +554,7 @@
           </ul>
         </div>
 
-        <p class="body" style="margin-top:32px">None of these are guaranteed in 90 days. <strong>What is guaranteed is the audience.</strong> The 5x impressions in 90 days. Everything in the KPI list above is downstream of having a real audience to move.</p>
+        <p class="body" style="margin-top:32px">None of these are guaranteed in 90 days. <strong>What is guaranteed is the audience.</strong> Everything in the KPI list above is downstream of having a real audience to move.</p>
       </section>
     </div>
 
@@ -589,8 +586,8 @@
           <div class="milestone featured">
             <div class="dot"></div>
             <div class="when">Week 12</div>
-            <h4>5x threshold on track</h4>
-            <p>Either we're at 5x impressions, or we keep working until we are. No exceptions.</p>
+            <h4>Audience is real</h4>
+            <p>Gilad's profile is reaching the right ICP at scale. You have the data to decide what comes next, on your terms.</p>
           </div>
         </div>
       </section>
@@ -605,7 +602,6 @@
           <div class="caption">
             <span class="label">Monthly impressions, CEO profile</span>
             A 36x lift. Inbound conversations went from a trickle to consistent. Conference invites. Partnership inquiries. The kind of surface area you can't buy with ads.
-            <span class="footnote">Our 5x guarantee for Sequence is set well below what we've actually delivered. It's the floor, not the ceiling.</span>
           </div>
         </div>
 
@@ -689,8 +685,6 @@
             </div>
             <div class="term">$6,000 total over 3 months · No long-term commitment</div>
 
-            <div class="guarantee-badge">5x impressions or we keep working for free</div>
-
             <div class="divider"></div>
 
             <div class="section-label">What's included</div>
@@ -728,8 +722,6 @@
             </div>
             <div class="term">$13,500 total over 3 months · Both execs covered · No long-term commitment</div>
 
-            <div class="guarantee-badge">5x impressions or we keep working for free</div>
-
             <div class="divider"></div>
 
             <div class="section-label">What's included</div>
@@ -764,8 +756,8 @@
           <div class="honest-item">
             <div class="num">01</div>
             <div>
-              <h3>The 5x is on <em>impressions</em>, not pipeline.</h3>
-              <p>Impressions, follower growth, and ICP relevance are the metrics we own and guarantee. Closed channel partner deals and booked B2B calls take 6 to 12 months minimum and depend on what your team does with the surface area we create. Anyone telling you they can guarantee partner pipeline in 90 days is selling you something that doesn't exist.</p>
+              <h3>What we own is <em>impressions</em>, not pipeline.</h3>
+              <p>Impressions, follower growth, and ICP relevance are the metrics we own. Closed channel partner deals and booked B2B calls take 6 to 12 months minimum and depend on what your team does with the surface area we create. Anyone telling you they can guarantee partner pipeline in 90 days is selling you something that doesn't exist.</p>
             </div>
           </div>
 
@@ -793,6 +785,7 @@
         <div class="eyebrow">Next step</div>
         <h2>Take this to Gilad. <em>Decide with real data, not vibes</em>.</h2>
         <p class="body">If it's a yes, we kick off within a week of signing. If you want to talk through it first, happy to jump on 15 minutes. If it's a no, we shake hands and stay friends. And we still owe each other coffee in Tel Aviv either way.</p>
+        <a class="cta-btn" href="https://calendar.app.google/nrbv4YbYFRTUQ63s7" target="_blank" rel="noopener">Book your 20-minute onboarding to get started</a>
         <div class="meta">Prepared by Alec Kremins, CEO, RallyUp</div>
       </section>
     </div>
